@@ -9,7 +9,7 @@ namespace BjornheimFactionPack
     public class Plugin : BaseUnityPlugin
     {
         #region values
-        private const string ModName = "BjornheimFactionPack", ModVersion = "0.0.17", ModGUID = "com.Frogger." + ModName;
+        private const string ModName = "BjornheimFactionPack", ModVersion = "0.0.19", ModGUID = "com.Frogger." + ModName;
         private static readonly Harmony harmony = new(ModGUID);
         public static Plugin _self;
         #endregion
@@ -47,7 +47,7 @@ namespace BjornheimFactionPack
                 .English("Blidhr Artificers Banner")
                 .Russian("Знамя Блидхрских мастеров");
             banner2.RequiredItems.Add("Wood", 6, true);
-            banner2.RequiredItems.Add("Guck", 5, true);
+            banner2.RequiredItems.Add("Blueberries", 5, true);
             banner2.RequiredItems.Add("MushroomYellow", 2, true);
             banner2.RequiredItems.Add("Coal", 1, true);
             banner2.Crafting.Set(PieceManager.CraftingTable.Workbench);
@@ -57,14 +57,14 @@ namespace BjornheimFactionPack
             #region banner3
             BuildPiece banner3 = new("scribex", "Banner3");
             banner3.Name
-                .English("Njord's Berserkers Banner")
+                .English("Hounds of Hel Banner")
                 .Russian("Знамя Берсерков Ньерда");
             banner3.Description
                 .English("Njord's Berserkers Banner")
                 .Russian("Знамя Берсерков Ньерда");
             banner3.RequiredItems.Add("Wood", 6, true);
             banner3.RequiredItems.Add("BoneFragments", 5, true);
-            banner3.RequiredItems.Add("GreydwarfEye", 2, true);
+            banner3.RequiredItems.Add("Bloodbag", 2, true);
             banner3.RequiredItems.Add("Coal", 1, true);
             banner3.Crafting.Set(PieceManager.CraftingTable.Workbench);
             banner3.Category.Add(BuildPieceCategory.Furniture);
@@ -124,23 +124,23 @@ namespace BjornheimFactionPack
             cape1.RequiredUpgradeItems.Add("Silver", 2);
             cape1.RequiredUpgradeItems.Add("LoxPelt", 2);
             //cape1.Snapshot();
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape1.Prefab, MaterialReplacer.ShaderType.CustomCreature);*/
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape1.Prefab, MaterialReplacer.ShaderType.UseUnityShader);*/
             #endregion
             #region cape2
             Item cape2 = new("scribex", "Cape2");
             cape2.Name
-                .English("Njord's Berserkers Cape")
+                .English("Hounds of Hel Cape")
                 .Russian("Плащ Берсерков Ньерда");
             cape2.Crafting.Add(ItemManager.CraftingTable.Workbench, 2);
             cape2.CraftAmount = 1;
             cape2.RequiredItems.Add("Silver", 2);
             cape2.RequiredItems.Add("LoxPelt", 6);
             cape2.RequiredItems.Add("Coal", 2);
-            cape2.RequiredItems.Add("GreydwarfEye", 5);
+            cape2.RequiredItems.Add("Bloodbag", 5);
             cape2.RequiredUpgradeItems.Add("Silver", 1);
             cape2.RequiredUpgradeItems.Add("LoxPelt", 3);
             //cape2.Snapshot();
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape2.Prefab, MaterialReplacer.ShaderType.CustomCreature);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape2.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
             #endregion
             #region cape3
             Item cape3 = new("scribex", "Cape3");
@@ -158,7 +158,7 @@ namespace BjornheimFactionPack
             cape3.RequiredUpgradeItems.Add("Silver", 1);
             cape3.RequiredUpgradeItems.Add("LoxPelt", 3);
             //cape3.Snapshot();
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape3.Prefab, MaterialReplacer.ShaderType.CustomCreature);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape3.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
             #endregion
             #region cape4
             Item cape4 = new("scribex", "Cape4");
@@ -169,12 +169,12 @@ namespace BjornheimFactionPack
             cape4.CraftAmount = 1;
             cape4.RequiredItems.Add("Silver", 2);
             cape4.RequiredItems.Add("LoxPelt", 6);
-            cape4.RequiredItems.Add("Guck", 5);
+            cape4.RequiredItems.Add("Blueberries", 5);
             cape4.RequiredItems.Add("Coal", 2);
             cape4.RequiredUpgradeItems.Add("Silver", 2);
             cape4.RequiredUpgradeItems.Add("LoxPelt", 3);
             //cape4.Snapshot();
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape4.Prefab, MaterialReplacer.ShaderType.CustomCreature);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape4.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
             #endregion
             #region cape5
             Item cape5 = new("scribex", "Cape5");
@@ -191,7 +191,7 @@ namespace BjornheimFactionPack
             cape5.RequiredUpgradeItems.Add("Silver", 1);
             cape5.RequiredUpgradeItems.Add("LoxPelt", 3);
             //cape5.Snapshot();
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape5.Prefab, MaterialReplacer.ShaderType.CustomCreature);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape5.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
             #endregion
             #region cape6
             Item cape6 = new("scribex", "Cape6");
@@ -208,12 +208,12 @@ namespace BjornheimFactionPack
             cape6.RequiredUpgradeItems.Add("DeerHide", 4);
             cape6.RequiredUpgradeItems.Add("BoneFragments", 5);
             //cape6.Snapshot();
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape6.Prefab, MaterialReplacer.ShaderType.CustomCreature);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape6.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
             #endregion
             #region cape7
             Item cape7 = new("scribex", "Cape7");
             cape7.Name
-                .English("Njord's Berserkers Deer Cape")
+                .English("Hounds of Hel Deer Cape")
                 .Russian("Олений плащ Берсерков Ньерда")
                 .Romanian("Njord's Berserkers Deer Cape");
             cape7.Crafting.Add(ItemManager.CraftingTable.Workbench, 2);
@@ -221,11 +221,11 @@ namespace BjornheimFactionPack
             cape7.RequiredItems.Add("DeerHide", 4);
             cape7.RequiredItems.Add("BoneFragments", 5);
             cape7.RequiredItems.Add("Coal", 2);
-            cape7.RequiredItems.Add("GreydwarfEye", 5);
+            cape7.RequiredItems.Add("Raspberry", 5);
             cape7.RequiredUpgradeItems.Add("DeerHide", 4);
             cape7.RequiredUpgradeItems.Add("BoneFragments", 5);
             //cape7.Snapshot();
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape7.Prefab, MaterialReplacer.ShaderType.CustomCreature);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape7.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
             #endregion 
             #region cape8
             /*Item cape8 = new("scribex", "Cape8");
@@ -242,7 +242,7 @@ namespace BjornheimFactionPack
             cape8.RequiredUpgradeItems.Add("DeerHide", 4);
             cape8.RequiredUpgradeItems.Add("BoneFragments", 5);
             //cape8.Snapshot();
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape8.Prefab, MaterialReplacer.ShaderType.CustomCreature);*/
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape8.Prefab, MaterialReplacer.ShaderType.UseUnityShader);*/
             #endregion
             #region cape9
             Item cape9 = new("scribex", "Cape9");
@@ -258,7 +258,7 @@ namespace BjornheimFactionPack
             cape9.RequiredUpgradeItems.Add("DeerHide", 4);
             cape9.RequiredUpgradeItems.Add("BoneFragments", 5);
             //cape9.Snapshot();
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape9.Prefab, MaterialReplacer.ShaderType.CustomCreature);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape9.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
             #endregion
             #region cape10
             Item cape10 = new("scribex", "Cape10");
@@ -274,7 +274,7 @@ namespace BjornheimFactionPack
             cape10.RequiredUpgradeItems.Add("DeerHide", 4);
             cape10.RequiredUpgradeItems.Add("BoneFragments", 5);
             //cape10.Snapshot();
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape10.Prefab, MaterialReplacer.ShaderType.CustomCreature);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape10.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
             #endregion
 
             #region cape11
@@ -291,23 +291,24 @@ namespace BjornheimFactionPack
             cape11.RequiredUpgradeItems.Add("Feathers", 2);
             cape11.RequiredUpgradeItems.Add("ScaleHide", 5);
             cape11.RequiredUpgradeItems.Add("Eitr", 3);
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape11.Prefab, MaterialReplacer.ShaderType.CustomCreature);*/
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape11.Prefab, MaterialReplacer.ShaderType.UseUnityShader);*/
             #endregion
             #region cape12
             Item cape12 = new("scribex", "Cape12");
             cape12.Name
-                .English("Njord's Berserkers Raven Cape")
+                .English("Hounds of Hel Raven Cape")
                 .Russian("Вороний плащ Берсерков Ньерда");
             cape12.Crafting.Add("piece_magetable", 1);
             cape12.CraftAmount = 1;
             cape12.RequiredItems.Add("Feathers", 10);
             cape12.RequiredItems.Add("ScaleHide", 5);
             cape12.RequiredItems.Add("Eitr", 20);
-            cape12.RequiredItems.Add("GreydwarfEye", 5);
+            cape12.RequiredItems.Add("Bloodbag", 5);
             cape12.RequiredUpgradeItems.Add("Feathers", 2);
             cape12.RequiredUpgradeItems.Add("ScaleHide", 5);
             cape12.RequiredUpgradeItems.Add("Eitr", 3);
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape12.Prefab, MaterialReplacer.ShaderType.CustomCreature);
+
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape12.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
             #endregion
             #region cape13
             Item cape13 = new("scribex", "Cape13");
@@ -323,7 +324,7 @@ namespace BjornheimFactionPack
             cape13.RequiredUpgradeItems.Add("Feathers", 2);
             cape13.RequiredUpgradeItems.Add("ScaleHide", 5);
             cape13.RequiredUpgradeItems.Add("Eitr", 3);
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape13.Prefab, MaterialReplacer.ShaderType.CustomCreature);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape13.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
             #endregion
             #region cape14
             Item cape14 = new("scribex", "Cape14");
@@ -335,11 +336,11 @@ namespace BjornheimFactionPack
             cape14.RequiredItems.Add("Feathers", 10);
             cape14.RequiredItems.Add("ScaleHide", 5);
             cape14.RequiredItems.Add("Eitr", 20);
-            cape14.RequiredItems.Add("Guck", 5);
+            cape14.RequiredItems.Add("Blueberries", 5);
             cape14.RequiredUpgradeItems.Add("Feathers", 2);
             cape14.RequiredUpgradeItems.Add("ScaleHide", 5);
             cape14.RequiredUpgradeItems.Add("Eitr", 3);
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape14.Prefab, MaterialReplacer.ShaderType.CustomCreature);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape14.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
             #endregion
             #region cape15
             Item cape15 = new("scribex", "Cape15");
@@ -355,7 +356,7 @@ namespace BjornheimFactionPack
             cape15.RequiredUpgradeItems.Add("Feathers", 2);
             cape15.RequiredUpgradeItems.Add("ScaleHide", 5);
             cape15.RequiredUpgradeItems.Add("Eitr", 3);
-            MaterialReplacer.RegisterGameObjectForShaderSwap(cape15.Prefab, MaterialReplacer.ShaderType.CustomCreature);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(cape15.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
             #endregion
             #endregion
 
@@ -380,14 +381,14 @@ namespace BjornheimFactionPack
             #region shield2
             Item shield2 = new("scribex", "Shield2");
             shield2.Name
-                .English("Njord's Berserkers Shield")
+                .English("Hounds of Hel Shield")
                 .Russian("Щит Берсерков Ньерда");
             shield2.Crafting.Add(ItemManager.CraftingTable.Forge, 2);
             shield2.CraftAmount = 1;
             shield2.RequiredItems.Add("FineWood", 10);
             shield2.RequiredItems.Add("Iron", 8);
             shield2.RequiredItems.Add("Coal", 2);
-            shield2.RequiredItems.Add("GreydwarfEye", 5);
+            shield2.RequiredItems.Add("Bloodbag", 5);
             shield2.RequiredUpgradeItems.Add("FineWood", 10);
             shield2.RequiredUpgradeItems.Add("Iron", 4);
             //shield2.Snapshot();
@@ -421,7 +422,7 @@ namespace BjornheimFactionPack
             shield4.CraftAmount = 1;
             shield4.RequiredItems.Add("FineWood", 10);
             shield4.RequiredItems.Add("Iron", 8);
-            shield4.RequiredItems.Add("Guck", 5);
+            shield4.RequiredItems.Add("Blueberries", 5);
             //shield4.RequiredItems.Add("MushroomYellow", 2);
             shield4.RequiredUpgradeItems.Add("FineWood", 10);
             shield4.RequiredUpgradeItems.Add("Iron", 4);
@@ -467,7 +468,7 @@ namespace BjornheimFactionPack
             #region ShieldBlackNjord
             Item shield7 = new("scribex", "ShieldBlackNjord");
             shield7.Name
-                .English("Njord's Berserkers BlackMetal Shield")
+                .English("Hounds of Hel BlackMetal Shield")
                 .Russian("Щит из чёрного металла Берсерков Ньерда")
                 .Romanian("Njord's Berserkers BlackMetal Shield");
             shield7.Crafting.Add(ItemManager.CraftingTable.Forge, 2);
@@ -475,7 +476,7 @@ namespace BjornheimFactionPack
             shield7.RequiredItems.Add("FineWood", 10);
             shield7.RequiredItems.Add("BlackMetal", 8);
             shield7.RequiredItems.Add("Chain", 5);
-            shield7.RequiredItems.Add("GreydwarfEye", 5);
+            shield7.RequiredItems.Add("Bloodbag", 5);
             shield7.RequiredUpgradeItems.Add("FineWood", 10);
             shield7.RequiredUpgradeItems.Add("BlackMetal", 4);
             shield7.RequiredUpgradeItems.Add("Chain", 2);
@@ -509,7 +510,7 @@ namespace BjornheimFactionPack
             shield9.RequiredItems.Add("FineWood", 10);
             shield9.RequiredItems.Add("BlackMetal", 8);
             shield9.RequiredItems.Add("Chain", 5);
-            shield9.RequiredItems.Add("Guck", 5);
+            shield9.RequiredItems.Add("Blueberries", 5);
             shield9.RequiredUpgradeItems.Add("FineWood", 10);
             shield9.RequiredUpgradeItems.Add("BlackMetal", 4);
             shield9.RequiredUpgradeItems.Add("Chain", 2);
@@ -533,6 +534,207 @@ namespace BjornheimFactionPack
             shield10.RequiredUpgradeItems.Add("Chain", 2);
             //shield10.Snapshot();
             MaterialReplacer.RegisterGameObjectForShaderSwap(shield10.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
+            #endregion
+
+            //Carapace
+            #region ShieldCarapace2
+            Item ShieldCarapace2 = new("scribex", "ShieldCarapace2");
+            ShieldCarapace2.Name
+                .English("Blidhr Artificers Carapace Shield")
+                .Russian("Панцирный щит мастеров Блидхра");
+            ShieldCarapace2.Crafting.Add(ItemManager.CraftingTable.BlackForge, 2);
+            ShieldCarapace2.CraftAmount = 1;
+            ShieldCarapace2.RequiredItems.Add("Carapace", 20);
+            ShieldCarapace2.RequiredItems.Add("ScaleHide", 3);
+            ShieldCarapace2.RequiredItems.Add("Eitr", 10);
+            ShieldCarapace2.RequiredItems.Add("Blueberries", 5);
+            ShieldCarapace2.RequiredUpgradeItems.Add("Carapace", 10);
+            ShieldCarapace2.RequiredUpgradeItems.Add("ScaleHide", 1);
+            ShieldCarapace2.RequiredUpgradeItems.Add("Eitr", 5);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(ShieldCarapace2.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
+            #endregion
+            #region ShieldCarapace3
+            Item ShieldCarapace3 = new("scribex", "ShieldCarapace3");
+            ShieldCarapace3.Name
+                .English("Hounds of Hel Carapace Shield")
+                .Russian("Панцирный щит Гончих Ада");
+            ShieldCarapace3.Crafting.Add(ItemManager.CraftingTable.BlackForge, 2);
+            ShieldCarapace3.CraftAmount = 1;
+            ShieldCarapace3.RequiredItems.Add("Carapace", 20);
+            ShieldCarapace3.RequiredItems.Add("ScaleHide", 3);
+            ShieldCarapace3.RequiredItems.Add("Eitr", 10);
+            ShieldCarapace3.RequiredItems.Add("Bloodbag", 5);
+            ShieldCarapace3.RequiredUpgradeItems.Add("Carapace", 10);
+            ShieldCarapace3.RequiredUpgradeItems.Add("ScaleHide", 1);
+            ShieldCarapace3.RequiredUpgradeItems.Add("Eitr", 5);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(ShieldCarapace3.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
+            #endregion
+            #region ShieldCarapace4
+            Item ShieldCarapace4 = new("scribex", "ShieldCarapace4");
+            ShieldCarapace4.Name
+                .English("Eyes of Fenrir Carapace Shield")
+                .Russian("Панцирный щит Глаз Фенрира");
+            ShieldCarapace4.Crafting.Add(ItemManager.CraftingTable.BlackForge, 2);
+            ShieldCarapace4.CraftAmount = 1;
+            ShieldCarapace4.RequiredItems.Add("Carapace", 20);
+            ShieldCarapace4.RequiredItems.Add("ScaleHide", 3);
+            ShieldCarapace4.RequiredItems.Add("Eitr", 10);
+            ShieldCarapace4.RequiredItems.Add("BoneFragments", 5);
+            ShieldCarapace4.RequiredUpgradeItems.Add("Carapace", 10);
+            ShieldCarapace4.RequiredUpgradeItems.Add("ScaleHide", 1);
+            ShieldCarapace4.RequiredUpgradeItems.Add("Eitr", 5);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(ShieldCarapace4.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
+            #endregion
+            #region ShieldCarapace5
+            Item ShieldCarapace5 = new("scribex", "ShieldCarapace5");
+            ShieldCarapace5.Name
+                .English("Ravens Carapace Shield")
+                .Russian("Панцирный щит Воронов");
+            ShieldCarapace5.Crafting.Add(ItemManager.CraftingTable.BlackForge, 2);
+            ShieldCarapace5.CraftAmount = 1;
+            ShieldCarapace5.RequiredItems.Add("Carapace", 20);
+            ShieldCarapace5.RequiredItems.Add("ScaleHide", 3);
+            ShieldCarapace5.RequiredItems.Add("Eitr", 10);
+            ShieldCarapace5.RequiredItems.Add("MushroomYellow", 5);
+            ShieldCarapace5.RequiredUpgradeItems.Add("Carapace", 10);
+            ShieldCarapace5.RequiredUpgradeItems.Add("ScaleHide", 1);
+            ShieldCarapace5.RequiredUpgradeItems.Add("Eitr", 5);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(ShieldCarapace5.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
+            #endregion
+
+            #endregion
+
+            #region Hood
+            #region HelmetMage2
+            Item HelmetMage2 = new("scribex", "HelmetMage2");
+            HelmetMage2.Name
+                .English("Blidhr Artificers Eitr-Hood")
+                .Russian("Сшитый из Эйтра капюшон Блидхрских мастеров");
+            HelmetMage2.Crafting.Add(ItemManager.CraftingTable.BlackForge, 2);
+            HelmetMage2.CraftAmount = 1;
+            HelmetMage2.RequiredItems.Add("LinenThread", 16);
+            HelmetMage2.RequiredItems.Add("Eitr", 20);
+            HelmetMage2.RequiredItems.Add("Iron", 2);
+            HelmetMage2.RequiredItems.Add("Blueberries", 5);
+            HelmetMage2.RequiredUpgradeItems.Add("LinenThread", 9);
+            HelmetMage2.RequiredUpgradeItems.Add("Eitr", 10);
+            HelmetMage2.RequiredUpgradeItems.Add("Iron", 1);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(HelmetMage2.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
+            #endregion
+            #region HelmetMage3
+            Item HelmetMage3 = new("scribex", "HelmetMage3");
+            HelmetMage3.Name
+                .English("Hounds of Hel Eitr-Hood")
+                .Russian("Сшитый из Эйтра капюшон Псов Ада");
+            HelmetMage3.Crafting.Add(ItemManager.CraftingTable.BlackForge, 2);
+            HelmetMage3.CraftAmount = 1;
+            HelmetMage3.RequiredItems.Add("LinenThread", 16);
+            HelmetMage3.RequiredItems.Add("Eitr", 15);
+            HelmetMage3.RequiredItems.Add("Iron", 2);
+            HelmetMage3.RequiredItems.Add("Bloodbag", 5);
+            HelmetMage3.RequiredUpgradeItems.Add("LinenThread", 9);
+            HelmetMage3.RequiredUpgradeItems.Add("Eitr", 8);
+            HelmetMage3.RequiredUpgradeItems.Add("Iron", 1);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(HelmetMage3.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
+            #endregion
+            #region HelmetMage4
+            Item HelmetMage4 = new("scribex", "HelmetMage4");
+            HelmetMage4.Name
+                .English("Eyes of Fenrir Eitr-Hood")
+                .Russian("Сшитый из Эйтра капюшон Глаз Фенрира");
+            HelmetMage4.Crafting.Add(ItemManager.CraftingTable.BlackForge, 2);
+            HelmetMage4.CraftAmount = 1;
+            HelmetMage4.RequiredItems.Add("LinenThread", 16);
+            HelmetMage4.RequiredItems.Add("Eitr", 15);
+            HelmetMage4.RequiredItems.Add("Iron", 2);
+            HelmetMage4.RequiredItems.Add("BoneFragments", 5);
+            HelmetMage4.RequiredUpgradeItems.Add("LinenThread", 9);
+            HelmetMage4.RequiredUpgradeItems.Add("Eitr", 10);
+            HelmetMage4.RequiredUpgradeItems.Add("Iron", 1);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(HelmetMage4.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
+            #endregion
+            #region HelmetMage5
+            Item HelmetMage5 = new("scribex", "HelmetMage5");
+            HelmetMage5.Name
+                .English("Ravens Eitr-Hood")
+                .Russian("Сшитый из Эйтра капюшон Воронов");
+            HelmetMage5.Crafting.Add(ItemManager.CraftingTable.BlackForge, 2);
+            HelmetMage5.CraftAmount = 1;
+            HelmetMage5.RequiredItems.Add("LinenThread", 16);
+            HelmetMage5.RequiredItems.Add("Eitr", 15);
+            HelmetMage5.RequiredItems.Add("Iron", 2);
+            HelmetMage5.RequiredItems.Add("MushroomYellow", 5);
+            HelmetMage5.RequiredUpgradeItems.Add("LinenThread", 9);
+            HelmetMage5.RequiredUpgradeItems.Add("Eitr", 8);
+            HelmetMage5.RequiredUpgradeItems.Add("Iron", 1);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(HelmetMage5.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
+            #endregion
+            #endregion
+
+            #region Robe
+            #region MageChest2
+            Item MageChest2 = new("scribex", "MageChest2");
+            MageChest2.Name
+                .English("Blidhr Artificers Eitr-weave robe")
+                .Russian("Сшитое из Эйтра одеяние Блидхрских мастеров");
+            MageChest2.Crafting.Add(ItemManager.CraftingTable.BlackForge, 2);
+            MageChest2.CraftAmount = 1;
+            MageChest2.RequiredItems.Add("LinenThread", 20);
+            MageChest2.RequiredItems.Add("Eitr", 20);
+            MageChest2.RequiredItems.Add("ScaleHide", 10);
+            MageChest2.RequiredItems.Add("Blueberries", 10);
+            MageChest2.RequiredUpgradeItems.Add("LinenThread", 10);
+            MageChest2.RequiredUpgradeItems.Add("Eitr", 10);
+            MageChest2.RequiredUpgradeItems.Add("ScaleHide", 5);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(MageChest2.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
+            #endregion
+            #region MageChest3
+            Item MageChest3 = new("scribex", "MageChest3");
+            MageChest3.Name
+                .English("Hounds of Hel Eitr-weave robe")
+                .Russian("Сшитое из Эйтра одеяние Псов Ада");
+            MageChest3.Crafting.Add(ItemManager.CraftingTable.BlackForge, 2);
+            MageChest3.CraftAmount = 1;
+            MageChest3.RequiredItems.Add("LinenThread", 20);
+            MageChest3.RequiredItems.Add("Eitr", 20);
+            MageChest3.RequiredItems.Add("ScaleHide", 10);
+            MageChest3.RequiredItems.Add("Bloodbag", 10);
+            MageChest3.RequiredUpgradeItems.Add("LinenThread", 10);
+            MageChest3.RequiredUpgradeItems.Add("Eitr", 10);
+            MageChest3.RequiredUpgradeItems.Add("ScaleHide", 5);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(MageChest3.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
+            #endregion
+            #region MageChest4
+            Item MageChest4 = new("scribex", "MageChest4");
+            MageChest4.Name
+                .English("Eyes of Fenrir Eitr-weave robe")
+                .Russian("Сшитое из Эйтра одеяние Глаз Фенрира");
+            MageChest4.Crafting.Add(ItemManager.CraftingTable.BlackForge, 2);
+            MageChest4.CraftAmount = 1;
+            MageChest4.RequiredItems.Add("LinenThread", 20);
+            MageChest4.RequiredItems.Add("Eitr", 20);
+            MageChest4.RequiredItems.Add("ScaleHide", 10);
+            MageChest4.RequiredItems.Add("BoneFragments", 10);
+            MageChest4.RequiredUpgradeItems.Add("LinenThread", 10);
+            MageChest4.RequiredUpgradeItems.Add("Eitr", 10);
+            MageChest4.RequiredUpgradeItems.Add("ScaleHide", 5);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(MageChest4.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
+            #endregion
+            #region MageChest5
+            Item MageChest5 = new("scribex", "MageChest5");
+            MageChest5.Name
+                .English("Ravens  Eitr-weave robe")
+                .Russian("Сшитое из Эйтра одеяние Воронов");
+            MageChest5.Crafting.Add(ItemManager.CraftingTable.BlackForge, 2);
+            MageChest5.CraftAmount = 1;
+            MageChest5.RequiredItems.Add("LinenThread", 20);
+            MageChest5.RequiredItems.Add("Eitr", 20);
+            MageChest5.RequiredItems.Add("ScaleHide", 10);
+            MageChest5.RequiredItems.Add("MushroomYellow", 10);
+            MageChest5.RequiredUpgradeItems.Add("LinenThread", 10);
+            MageChest5.RequiredUpgradeItems.Add("Eitr", 10);
+            MageChest5.RequiredUpgradeItems.Add("ScaleHide", 5);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(MageChest5.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
             #endregion
             #endregion
 

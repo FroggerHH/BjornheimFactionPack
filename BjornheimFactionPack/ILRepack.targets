@@ -3,9 +3,9 @@
     <Target Name="ILRepacker" AfterTargets="Build">
         <ItemGroup>
             <InputAssemblies Include="$(TargetPath)"/>
-            <InputAssemblies Include="C:\Users\alex\source\repos\Valheim\utils\Managers\ItemManager.dll"/>
-            <InputAssemblies Include="C:\Users\alex\source\repos\Valheim\utils\Managers\PieceManager.dll"/>
-            <InputAssemblies Include="C:\Users\alex\source\repos\Valheim\utils\Managers\ServerSync.dll"/>
+            <InputAssemblies Include="C:\Users\alex\source\repos\Valheim\_utils\Managers\ItemManager.dll"/>
+            <InputAssemblies Include="C:\Users\alex\source\repos\Valheim\_utils\Managers\PieceManager.dll"/>
+            <InputAssemblies Include="C:\Users\alex\source\repos\Valheim\_utils\Managers\ServerSync.dll"/>
         </ItemGroup>
         <ILRepack Parallel="true" DebugInfo="true" Internalize="true" InputAssemblies="@(InputAssemblies)"
                   OutputFile="$(TargetPath)" TargetKind="SameAsPrimaryAssembly" LibraryPath="$(OutputPath)"/>

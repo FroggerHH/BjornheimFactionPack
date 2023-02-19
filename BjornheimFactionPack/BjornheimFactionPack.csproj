@@ -36,26 +36,31 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
+    <Reference Include="0Harmony, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Games\Steam\steamapps\common\Valheim\BepInEx\core\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="assembly_valheim_publicized">
-      <HintPath>..\..\utils\AssemblyPublicizer\assembly_valheim_publicized.dll</HintPath>
+    <Reference Include="assembly_guiutils_publicized">
+      <HintPath>..\..\_utils\AssemblyPublicizer\assembly_guiutils_publicized.dll</HintPath>
     </Reference>
-    <Reference Include="BepInEx">
+    <Reference Include="assembly_utils_publicized">
+      <HintPath>..\..\_utils\AssemblyPublicizer\assembly_utils_publicized.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx, Version=5.4.19.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Games\Steam\steamapps\common\Valheim\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="ItemManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\utils\Managers\ItemManager.dll</HintPath>
+      <HintPath>..\..\_utils\Managers\ItemManager.dll</HintPath>
     </Reference>
-    <Reference Include="PieceManager, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="PieceManager, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\utils\Managers\PieceManager.dll</HintPath>
+      <HintPath>..\..\_utils\Managers\PieceManager.dll</HintPath>
     </Reference>
     <Reference Include="ServerSync, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\utils\Managers\ServerSync.dll</HintPath>
+      <HintPath>..\..\_utils\Managers\ServerSync.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -69,7 +74,7 @@
       <HintPath>D:\Games\Steam\steamapps\common\Valheim\valheim_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>..\..\utils\UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>..\..\_utils\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>D:\Games\Steam\steamapps\common\Muck\Muck_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
